@@ -1,0 +1,242 @@
+*{
+    box-sizing :border-box;
+    margin:0;
+    padding:0;
+}
+
+
+/*
+==================================
+ The section of the body 
+=================================
+*/
+body{
+    background:#151c58;
+    position:relative;
+}
+
+#particles-js{
+  height:100vh;
+}
+
+
+/*
+==================================
+ The section of the page 
+==================================
+*/
+section{
+    background:rgb(22, 5, 21);
+    width:50%;
+    position:absolute;
+    padding:10px 15px;
+    top:8%;
+    right:25%;
+    left:25%;
+}
+
+
+
+/*
+====================================
+The section of the header
+====================================
+*/
+header{
+    color:white;
+    background:#151c58;
+    padding:10px;
+}
+
+.header{
+    width:30%;
+    font-size:20px;
+    font-family:cursive;
+    margin:5px 0;
+    text-shadow:2px 2px rgb(22, 5, 21);
+    font-weight:bold;
+    letter-spacing: 4px;
+    border-radius:5px;
+}
+
+
+header input{
+    padding:10px;
+    width:60%;
+    border:none;
+    outline:none;
+    color:rgb(22, 5, 21);
+    font-weight:bold;
+}
+
+header button{
+    padding:10px;
+    background:rgb(22, 5, 21);
+    color:#fff;
+    border:1px solid #00ff00;
+    outline:none;
+    font-weight:bold;
+    cursor:pointer;
+    
+}
+
+
+/* 
+===================================
+  THE SECTION OF THE DATE AND TIME
+=====================================
+*/
+.datetime{
+  display:flex;
+  align-items:center;
+  color:white;
+  font-family:monospace;
+  justify-content: flex-end;
+  margin-top:3px;
+  width:100%;
+}
+
+
+/*
+====================================
+The section of the output
+====================================
+*/
+.output{
+    background:#151c58;
+    display:flex;
+    justify-content: space-between;
+    border-radius:5px;
+    margin:10px 0;
+    transform:translateY(10%);
+}
+
+.display{
+    font-size:14px;
+    font-family: cursive;
+    color:#fff;
+    padding:10px;
+    width:87%;
+    border-left:3px solid #00ff00;
+    overflow:auto;
+}
+
+.display::-webkit-scrollbar{
+  background:#151c58;
+}
+
+.delete {
+    cursor:pointer;
+    padding:10px;
+    background:red;
+}
+
+.delete a{
+  color:#fff;
+}
+
+
+/*
+============================
+THE SECTION OF THE ERROR 
+===============================
+*/
+.error{
+  color:red;
+  transition:0.5s ease-in-out;
+  font-size:13px;
+  margin:6px;
+  font-family:monospace;
+}
+
+
+
+/*
+====================================
+The section of the drag and drop
+=====================================
+*/
+
+.draggable {
+  will-change: transform;
+  cursor: move;
+  transition: all 0.5s ease-in-out;
+  overflow:auto;
+  position:relative;
+  user-select: none;
+}
+
+.draggable::-webkit-scrollbar{
+  display:none;
+}
+
+.draggable::after {
+  content: 'drag me';
+  right: 40px;
+  top:12px;
+  font-size: 10px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 200ms;
+  transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.50);
+  transform: translateX(120%);
+  opacity: 0;
+  color:white;
+  transition:all .4s ease-in-out;
+}
+
+.draggable:hover::after{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/*
+=======================================
+ THE SECTION OF THE MEDIA QUERY 
+=======================================
+*/
+
+@media screen and (max-width:600px) and (min-width:426px){
+  section{
+    width:80%;
+    position:absolute;
+    left:10%;
+    right:10%;
+  }
+
+  .datetime{
+    font-size:12px;
+  }
+}
+
+@media screen and (max-width:425px){
+   section{
+    width:90%;
+    position:absolute;
+    left:5%;
+  }
+
+  .datetime{
+    font-size:12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
